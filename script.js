@@ -1,10 +1,18 @@
-
 document.addEventListener('DOMContentLoaded', function() {
-    const downloadButtons = document.querySelectorAll('.download-btn, .cta-btn');
-    
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('Download starting... Please wait.');
+    var downloadButton = document.getElementById('download-btn'); // Первая кнопка
+    var ctaButton = document.querySelector('.cta-btn'); // Вторая кнопка
+
+    if (downloadButton) {
+        downloadButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'https://hqlauncher.github.io/download/';
         });
-    });
+    }
+
+    if (ctaButton) {
+        ctaButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = 'https://hqlauncher.github.io/download/';
+        });
+    }
 });
